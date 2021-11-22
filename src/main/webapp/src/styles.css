@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+input[type='checkbox'].form-control{
+    width: 40px;
+}
+
+.mt-33{
+    margin-top: 33px;
+}
+
+.fa {                 /* You should use \ and not /*/
+    font-family: "Font Awesome 5 Free";  /* This is the correct font-family*/
+    font-weight: 900;
+}
