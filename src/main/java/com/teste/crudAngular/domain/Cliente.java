@@ -20,7 +20,7 @@ public class Cliente {
     @Id
     @SequenceGenerator(name = "ClienteSequence", sequenceName = "cliente_sequence", schema = "public", allocationSize = 1)
     @GeneratedValue(generator = "ClienteSequence", strategy = GenerationType.SEQUENCE)
-    private long id;
+    private Long id;
 
     @NotBlank(message = "O cliente precisa ter um nome")
     @Size(min = 3, max = 100,message = "o nome deve ter de 3 a 100 Caracteres")
