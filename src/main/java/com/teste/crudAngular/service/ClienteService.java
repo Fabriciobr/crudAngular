@@ -38,9 +38,11 @@ public class ClienteService {
     }
 
     public Cliente createCliente(Cliente cliente) throws Exception{
-        List<Cliente> exisentes = clienteRepository.findByCpfCnpj(cliente.getCpfCnpj());
-        if(exisentes != null && exisentes.size()> 0){
-            throw new Exception("já existe um cliente com esse CPF/CNPJ");
+        if(cliente.getId() == null) {
+            List<Cliente> exisentes = clienteRepository.findByCpfCnpj(cliente.getCpfCnpj());
+            if (exisentes != null && exisentes.size() > 0) {
+                throw new Exception("já existe um cliente com esse CPF/CNPJ");
+            }
         }
         if(cliente.getDataCadastro() == null){
             cliente.setDataCadastro(LocalDate.now());
